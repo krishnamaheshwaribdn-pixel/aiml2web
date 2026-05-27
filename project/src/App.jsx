@@ -5,9 +5,9 @@ function App() {
 
   const acProducts = [
     {
-      id: 1,
+      id: 1, 
       name: "LG Dual Inverter AC",
-      price: "?42,999",
+      price: "?42,989",
       originalPrice: "?49,999",
       rating: 4.8,
       offers: ["Free installation", "2 years warranty"],
@@ -51,10 +51,10 @@ function App() {
       <header className="topbar">
         <div className="brand">
           <span className="logo">AC Bazaar</span>
-          <span className="tagline">Best AC deals — fast delivery</span>
+          <span className="tagline">Best AC deals ï¿½ fast delivery</span>
         </div>
 
-        <div className="search-bar">
+        <div className="search-bar ">
           <input type="search" placeholder="Search for air conditioners, brands, offers..." />
           <button>Search</button>
         </div>

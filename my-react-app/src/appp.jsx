@@ -9,7 +9,7 @@ function Appp() {
 
   return (
     <>
-      <h2>Student information</h2>
+      <h2>Studentinformation</h2>
 
       <audio controls>
         <source src="" type="audio/mp3"></source>

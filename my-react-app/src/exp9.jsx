@@ -37,7 +37,7 @@ function Exp9() {
 
         <input
           className="input"
-          type="password"
+          type="passwordq"
           placeholder="Enter Your Password"
           onChange={(e) => setPassword(e.target.value)}
         />
