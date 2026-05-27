@@ -1,0 +1,8 @@
+.student-info{
+  background-color:red ;
+  color: black;
+  border: 5px solid blue;
+  width: 100px;
+  margin: 30px auto;
+  padding: 30px;
+}

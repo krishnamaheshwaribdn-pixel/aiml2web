@@ -1,0 +1,18 @@
+body { font-family: Georgia, 'Times New Roman', Times, serif; }
+
+.page { text-align: center; padding: 30px 20px; }
+.page-title { font-size: 36px; margin-bottom: 18px; }
+
+.form-card { width: 80%; max-width: 1000px; margin: 0 auto; background: #ff0000; padding: 30px 20px 40px; box-sizing: border-box; border: 2px solid #990000; }
+.form-title { font-size: 64px; color: #ffffff; margin: 0 0 18px; font-weight: 700; text-align: center; font-family: 'Arial Black', Gadget, sans-serif; }
+
+.input { display: block; width: 100%; padding: 10px 12px; margin: 10px 0; background: #333; color: #e6e6e6; border: none; outline: none; box-sizing: border-box; }
+.input::placeholder { color: #bfbfbf; }
+
+.button-wrap { text-align: center; margin-top: 18px; }
+.submit { background: #00f5e0; color: #003; border: 5px solid green; padding: 6px 40px; cursor: pointer; }
+
+@media (min-width: 900px) {
+  .form-card { padding: 40px 30px 60px; }
+  .form-title { font-size: 84px; }
+}
