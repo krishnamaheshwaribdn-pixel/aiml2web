@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Result Calculator</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .container {
+      background: white;
+      padding: 25px;
+      width: 400px;
+      max-width: 95%;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px gray;
+    }
+
+    input {
+      padding: 8px;
+      width: 80%;
+      margin-top: 5px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: blue;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: darkblue;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Student Result Calculator</h2>
+    <label for="subjects">Enter Number of Subjects</label><br>
+    <input type="number" id="subjects" min="1" placeholder="Number of subjects"><br><br>
+    <button type="button" onclick="calculateResult()">Calculate Result</button>
+    <div id="result"></div>
+  </div>
+  <script>
+    function calculateResult() {
+      const n = parseInt(document.getElementById('subjects').value, 10);
+      const resultElement = document.getElementById('result');
+
+      if (!n || n < 1) {
+        resultElement.innerHTML = 'Please enter a valid number of subjects.';
+        return;
+      }
+
+      let total = 0;
+
+      for (let i = 1; i <= n; i++) {
+        const input = prompt('Enter marks for Subject ' + i + ' (0-100)');
+        if (input === null) {
+          resultElement.innerHTML = 'Calculation cancelled.';
+          return;
+        }
+
+        const marks = parseFloat(input);
+        if (Number.isNaN(marks) || marks < 0 || marks > 100) {
+          resultElement.innerHTML = 'Please enter valid marks between 0 and 100.';
+          return;
+        }
+
+        total += marks;
+      }
+
+      const average = total / n;
+      let grade;
+
+      if (average >= 90) {
+        grade = 'A+';
+      } else if (average >= 75) {
+        grade = 'A';
+      } else if (average >= 60) {
+        grade = 'B';
+      } else if (average >= 50) {
+        grade = 'C';
+      } else {
+        grade = 'F';
+      }
+
+      const result = average >= 40 ? 'PASS' : 'FAIL';
+
+      resultElement.innerHTML =
+        'Total Marks: ' + total + '<br>' +
+        'Average Marks: ' + average.toFixed(2) + '<br>' +
+        'Grade: ' + grade + '<br>' +
+        'Result: ' + result;
+    }
+  </script>
+</body>
+</html>
