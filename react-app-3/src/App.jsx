@@ -7,7 +7,7 @@ function App() {
         <h1>React App 3</h1>
         <p>Welcome to your third React application in the aiml2web workspace.</p>
         <div className="actions">
-          <button type="button">Get Started</button>
+          <button type="button">GetStarted</button>
         </div>
       </div>
     </div>
