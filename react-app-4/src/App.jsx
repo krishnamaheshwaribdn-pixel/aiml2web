@@ -61,7 +61,7 @@ onChange={(e)=>setPassword(e.target.value)}
 <p className="success">{success}</p>
 {users.length > 0 && (
 <div className="apiData">
-<h3>Registered Users</h3>
+<h3>Register Users</h3>
 <ul>
 {users.map((user,index) => (
 <li key={index}>
